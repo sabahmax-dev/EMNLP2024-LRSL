@@ -17,7 +17,7 @@ Use a well-trained classification model, fine-tuned on your dataset.
 Perform inference on the training dataset to extract the top-k logits for each sample. These logits serve as a basis for fine-tuning the text embeddings.
 
 ## Step 3: Fine-Tune Text Embedding
-Utilize the training dataset to fine-tune a text embedding model. The embedding is trained to map text samples and semantic labels into a shared representation space using a triplet-based loss.
+Utilize the training dataset to fine-tune a text embedding model. The embedding is trained to map text samples and semantic labels into a shared representation space using a multiple-negatives ranking loss.
 ## Step 4: Perform Similarity-Based Reranking
 ### 4.1 Compute Variance for Hard Sample Detection
 Use a portion of the dataset (e.g., training or validation set) to calculate the variance (Var) of logits distributions as a measure of confidence.
